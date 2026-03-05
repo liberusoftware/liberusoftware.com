@@ -61,20 +61,32 @@ class ManageSiteSettings extends SettingsPage
                 Section::make('Social Media Links')
                     ->description('Add your social media profile URLs')
                     ->schema([
-                        TextInput::make('facebook_url')
-                            ->label('Facebook URL')
-                            ->url()
-                            ->maxLength(255),
-                        TextInput::make('twitter_url')
-                            ->label('Twitter URL')
-                            ->url()
-                            ->maxLength(255),
-                        TextInput::make('github_url')
-                            ->label('GitHub URL')
+                        TextInput::make('whatsapp_url')
+                            ->label('WhatsApp URL')
                             ->url()
                             ->maxLength(255),
                         TextInput::make('youtube_url')
                             ->label('YouTube URL')
+                            ->url()
+                            ->maxLength(255),
+                        TextInput::make('facebook_url')
+                            ->label('Facebook URL')
+                            ->url()
+                            ->maxLength(255),
+                        TextInput::make('instagram_url')
+                            ->label('Instagram URL')
+                            ->url()
+                            ->maxLength(255),
+                        TextInput::make('twitter_url')
+                            ->label('X (Twitter) URL')
+                            ->url()
+                            ->maxLength(255),
+                        TextInput::make('linkedin_url')
+                            ->label('LinkedIn URL')
+                            ->url()
+                            ->maxLength(255),
+                        TextInput::make('github_url')
+                            ->label('GitHub URL')
                             ->url()
                             ->maxLength(255),
                     ])

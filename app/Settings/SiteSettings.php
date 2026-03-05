@@ -13,10 +13,13 @@ class SiteSettings extends Settings
     public ?string $site_country;
     public string $site_currency;
     public string $site_default_language;
-    public ?string $facebook_url;
-    public ?string $twitter_url;
-    public ?string $github_url;
+    public ?string $whatsapp_url;
     public ?string $youtube_url;
+    public ?string $facebook_url;
+    public ?string $instagram_url;
+    public ?string $twitter_url;
+    public ?string $linkedin_url;
+    public ?string $github_url;
     public string $footer_copyright;
 
     public static function group(): string
