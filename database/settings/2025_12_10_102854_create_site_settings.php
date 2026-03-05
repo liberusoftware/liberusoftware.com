@@ -13,8 +13,11 @@ return new class extends SettingsMigration
         $this->migrator->add('site.site_country', '');
         $this->migrator->add('site.site_currency', '$');
         $this->migrator->add('site.site_default_language', 'en');
+        $this->migrator->add('site.whatsapp_url', null);
         $this->migrator->add('site.facebook_url', null);
+        $this->migrator->add('site.instagram_url', null);
         $this->migrator->add('site.twitter_url', null);
+        $this->migrator->add('site.linkedin_url', null);
         $this->migrator->add('site.github_url', 'https://github.com/liberusoftware/boilerplate-laravel');
         $this->migrator->add('site.youtube_url', null);
         $this->migrator->add('site.footer_copyright', '© ' . date('Y') . ' ' . config('app.name', 'Liberu') . '. All rights reserved.');
