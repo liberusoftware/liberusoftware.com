@@ -6,7 +6,7 @@
     <meta name="robots" content="index, follow">
 
     {{-- Page title --}}
-    <title>@yield('page_title', 'Liberu Software') | Liberu Software</title>
+    <title>@yield('page_title', config('app.name', 'Liberu Software')) | {{ config('app.name', 'Liberu Software') }}</title>
 
     {{-- Primary meta description --}}
     <meta name="description" content="@yield('meta_description', 'Liberu Software delivers enterprise-grade, open-source Laravel applications — from CRM and accounting to e-commerce and genealogy — built for modern businesses.')">

@@ -54,6 +54,14 @@
         <div class="lg:col-span-3">
             <div class="bg-neutral-800/60 border border-neutral-700/60 rounded-xl p-7 sm:p-8">
 
+                {{-- Error flash (mail failure) --}}
+                @if(session('error'))
+                <div class="mb-6 flex items-start gap-3 bg-red-900/40 border border-red-700/50 text-red-300 rounded-lg px-4 py-3 text-sm">
+                    <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
+                    {{ session('error') }}
+                </div>
+                @endif
+
                 {{-- Success message --}}
                 @if(session('success'))
                 <div class="mb-6 flex items-start gap-3 bg-green-900/40 border border-green-700/50 text-green-300 rounded-lg px-4 py-3 text-sm">
@@ -76,7 +84,7 @@
                 </div>
                 @endif
 
-                <form method="POST" action="{{ route('contact.submit') }}" novalidate>
+                <form method="POST" action="{{ route('contact.submit') }}">
                     @csrf
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">

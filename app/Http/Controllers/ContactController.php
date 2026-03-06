@@ -23,7 +23,13 @@ class ContactController extends Controller
             'message'      => ['required', 'string', 'max:5000'],
         ]);
 
-        Mail::to('office@liberu.co.uk')->send(new ContactMail($validated));
+        try {
+            Mail::to('office@liberu.co.uk')->send(new ContactMail($validated));
+        } catch (\Exception $e) {
+            return redirect()->route('contact')
+                ->withInput()
+                ->with('error', 'Sorry, we were unable to send your message. Please try contacting us directly at support@liberu.co.uk.');
+        }
 
         return redirect()->route('contact')
             ->with('success', 'Thank you for your message. We will be in touch shortly.');
