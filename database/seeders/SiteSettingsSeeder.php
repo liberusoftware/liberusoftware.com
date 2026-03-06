@@ -14,6 +14,7 @@ class SiteSettingsSeeder extends Seeder
         $settings->site_currency = '£';
         $settings->site_default_language = 'en';
         $settings->site_address = 'Liberu Group Ltd, 15 Commercial Road, Swindon, Wiltshire, United Kingdom SN1 5NF';
+        $settings->footer_copyright = '© ' . date('Y') . ' Liberu Group Ltd. All Rights Reserved.';
         $settings->site_country = 'United Kingdom';
         $settings->site_email = 'info@liberurealestate.com';
         $settings->whatsapp_url = 'https://wa.me/+441793200950';

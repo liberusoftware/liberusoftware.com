@@ -165,7 +165,7 @@
 
         <div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-between text-xs text-neutral-500">
             <span>
-                {{ $siteSettings->footer_copyright ?? ('© ' . now()->year . ' Liberu Software Ltd. All Rights Reserved.') }}
+                {{ $siteSettings->footer_copyright ?? ('© ' . now()->year . ' Liberu Group Ltd. All Rights Reserved.') }}
             </span>
             <div class="flex items-center gap-4">
                 <a href="{{ url('/privacy-policy') }}" class="hover:text-neutral-300 transition-colors">Privacy Policy</a>
