@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\TeamInvitationController;
@@ -15,7 +16,16 @@ use Laravel\Jetstream\Http\Controllers\TeamInvitationController;
 |
 */
 
-Route::get('/', fn () => view('welcome'));
+Route::get('/', fn () => view('welcome'))->name('home');
+
+// Static pages
+Route::get('/about', fn () => view('about'))->name('about');
+Route::get('/privacy-policy', fn () => view('privacy-policy'))->name('privacy-policy');
+Route::get('/terms', fn () => view('terms'))->name('terms');
+
+// Contact form
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 // Theme demo page
 Route::get('/theme-demo', fn () => view('theme-demo'))->name('theme.demo');
@@ -27,7 +37,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/messages', function () {
         return view('messages.index');
     })->name('messages.index');
-    
+
     Route::get('/messages/{user}', function ($userId) {
         $user = \App\Models\User::findOrFail($userId);
         return view('messages.show', compact('user'));
