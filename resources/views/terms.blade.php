@@ -30,7 +30,8 @@
         <section>
             <h2 class="text-lg font-bold text-white mb-3">2. About Us</h2>
             <p>
-                The Site is operated by <strong class="text-neutral-200">Liberu Software Ltd</strong>, a company registered in England and Wales.
+                The Site is operated by <strong class="text-neutral-200">Liberu Software Ltd</strong>, a company registered in England and Wales and part of the Liberu Group.
+                Registered office: <strong class="text-neutral-200">Liberu Group Ltd, 15 Commercial Road, Swindon, Wiltshire, United Kingdom SN1 5NF</strong>.
                 You can contact us at <a href="mailto:support@liberu.co.uk" class="text-[#f5c518] hover:underline">support@liberu.co.uk</a>
                 or <a href="tel:+441793200950" class="text-[#f5c518] hover:underline">+44 1793 200 950</a>.
             </p>

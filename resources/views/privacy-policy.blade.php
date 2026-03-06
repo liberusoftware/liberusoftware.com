@@ -19,8 +19,9 @@
         <section>
             <h2 class="text-lg font-bold text-white mb-3">1. Who We Are</h2>
             <p>
-                Liberu Software Ltd ("<strong class="text-neutral-200">Liberu Software</strong>", "<strong class="text-neutral-200">we</strong>", "<strong class="text-neutral-200">us</strong>" or "<strong class="text-neutral-200">our</strong>") is a company registered in England and Wales.
+                Liberu Software Ltd ("<strong class="text-neutral-200">Liberu Software</strong>", "<strong class="text-neutral-200">we</strong>", "<strong class="text-neutral-200">us</strong>" or "<strong class="text-neutral-200">our</strong>") is a company registered in England and Wales, and is part of the Liberu Group.
                 We operate the website <a href="https://www.liberusoftware.com" class="text-[#f5c518] hover:underline">www.liberusoftware.com</a> and related services.
+                Registered office: <strong class="text-neutral-200">Liberu Group Ltd, 15 Commercial Road, Swindon, Wiltshire, United Kingdom SN1 5NF</strong>.
             </p>
             <p class="mt-2">
                 For any data protection enquiries, please contact us at:
