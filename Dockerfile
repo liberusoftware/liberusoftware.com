@@ -1,6 +1,6 @@
-# Supported PHP versions: 8.2, 8.3
-# Note: PHP 8.5 is not yet fully supported by all extensions (rdkafka, memcached, swoole)
-ARG PHP_VERSION=8.3
+# Supported PHP versions: 8.2, 8.3, 8.5
+ARG PHP_VERSION=8.5
+# PHP 8.5 support requires compatible extension builds (check install-php-extensions)
 
 ###########################################
 # Composer dependencies stage
@@ -26,7 +26,8 @@ RUN composer install \
     --no-autoloader \
     --no-ansi \
     --no-scripts \
-    --prefer-dist
+    --prefer-dist \
+    --ignore-platform-req=ext-pcntl
 
 ###########################################
 # Main application stage
@@ -46,7 +47,8 @@ ARG TZ=UTC
 ENV TERM=xterm-color \
     WITH_HORIZON=false \
     WITH_SCHEDULER=false \
-    OCTANE_SERVER=swoole \
+    WITH_REVERB=false \
+    OCTANE_SERVER=roadrunner \
     USER=octane \
     ROOT=/var/www/html \
     COMPOSER_FUND=0 \
@@ -54,7 +56,7 @@ ENV TERM=xterm-color \
 
 WORKDIR ${ROOT}
 
-SHELL ["/bin/sh", "-eou", "pipefail", "-c"]
+SHELL ["/bin/sh", "-lc"]
 
 RUN ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime \
   && echo ${TZ} > /etc/timezone
@@ -88,11 +90,8 @@ RUN apk update && \
     intl \
     gd \
     redis \
-    rdkafka \
-    memcached \
-    igbinary \
-    ldap \
-    swoole && \
+    pcntl \
+    igbinary && \
     docker-php-source delete && \
     rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
 
@@ -130,12 +129,12 @@ COPY --chown=${USER}:${USER} --from=composer-deps /app/vendor ./vendor
 # Copy composer files (needed for autoloader generation)
 COPY --chown=${USER}:${USER} composer.json composer.lock ./
 
-# Generate optimized autoloader with vendor already in place
+# Copy application code first so autoloader can resolve all files
+COPY --chown=${USER}:${USER} . .
+
+# Generate optimized autoloader now that all app files are present
 RUN composer dump-autoload --classmap-authoritative --no-dev && \
     composer clear-cache
-
-# Copy application code
-COPY --chown=${USER}:${USER} . .
 
 # Create necessary Laravel directories
 RUN mkdir -p \
@@ -149,8 +148,11 @@ RUN mkdir -p \
 
 # Copy configuration files
 COPY --chown=${USER}:${USER} .docker/supervisord.conf /etc/supervisor/
-COPY --chown=${USER}:${USER} .docker/octane/Swoole/supervisord.swoole.conf /etc/supervisor/conf.d/
-COPY --chown=${USER}:${USER} .docker/supervisord.*.conf /etc/supervisor/conf.d/
+COPY --chown=${USER}:${USER} .docker/octane/RoadRunner/supervisord.roadrunner.conf /etc/supervisor/conf.d/
+COPY --chown=${USER}:${USER} .docker/supervisord.horizon.conf /etc/supervisor/conf.d/
+COPY --chown=${USER}:${USER} .docker/supervisord.reverb.conf /etc/supervisor/conf.d/
+COPY --chown=${USER}:${USER} .docker/supervisord.scheduler.conf /etc/supervisor/conf.d/
+COPY --chown=${USER}:${USER} .docker/supervisord.worker.conf /etc/supervisor/conf.d/
 COPY --chown=${USER}:${USER} .docker/php.ini ${PHP_INI_DIR}/conf.d/99-octane.ini
 COPY --chown=${USER}:${USER} .docker/start-container /usr/local/bin/start-container
 
@@ -161,6 +163,7 @@ RUN chmod +x /usr/local/bin/start-container && \
     cat .docker/utilities.sh >> ~/.bashrc
 
 EXPOSE 8000
+EXPOSE 8080
 
 ENTRYPOINT ["start-container"]
 
