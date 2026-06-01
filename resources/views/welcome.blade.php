@@ -282,6 +282,86 @@
                 </a>
             </div>
 
+            {{-- Boilerplate (core) --}}
+            <div class="group bg-neutral-800/60 hover:bg-neutral-800 border border-neutral-700/60 hover:border-[#f5c518]/40 rounded-xl p-6 flex flex-col transition-all duration-200 hover:shadow-xl hover:shadow-black/30">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-neutral-700 text-lg" aria-hidden="true">🧩</span>
+                    <h3 class="text-base font-bold text-white">Boilerplate (core)</h3>
+                </div>
+                <p class="text-neutral-400 text-sm mb-4 leading-relaxed">Core starter and shared utilities used across Liberu projects.</p>
+                <ul class="text-neutral-300 text-sm space-y-1.5 mb-6 flex-1">
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Starter application template</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Shared packages &amp; helpers</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Authentication &amp; permissions</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Standardised CI &amp; release tooling</li>
+                </ul>
+                <a href="https://github.com/liberusoftware/boilerplate-laravel" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 text-xs text-neutral-500 hover:text-[#f5c518] transition-colors font-medium">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+                    View on GitHub
+                </a>
+            </div>
+
+            {{-- Browser Game --}}
+            <div class="group bg-neutral-800/60 hover:bg-neutral-800 border border-neutral-700/60 hover:border-[#f5c518]/40 rounded-xl p-6 flex flex-col transition-all duration-200 hover:shadow-xl hover:shadow-black/30">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-neutral-700 text-lg" aria-hidden="true">🎮</span>
+                    <h3 class="text-base font-bold text-white">Browser Game</h3>
+                </div>
+                <p class="text-neutral-400 text-sm mb-4 leading-relaxed">Example Laravel-based browser game platform and mechanics.</p>
+                <ul class="text-neutral-300 text-sm space-y-1.5 mb-6 flex-1">
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Multiplayer game loop examples</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Player progression &amp; leaderboards</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Asset &amp; session management</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Example AI &amp; mechanics</li>
+                </ul>
+                <a href="https://github.com/liberu-browser-game/browser-game-laravel" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 text-xs text-neutral-500 hover:text-[#f5c518] transition-colors font-medium">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+                    View on GitHub
+                </a>
+            </div>
+
+            {{-- Control Panel --}}
+            <div class="group bg-neutral-800/60 hover:bg-neutral-800 border border-neutral-700/60 hover:border-[#f5c518]/40 rounded-xl p-6 flex flex-col transition-all duration-200 hover:shadow-xl hover:shadow-black/30">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-neutral-700 text-lg" aria-hidden="true">🖥️</span>
+                    <h3 class="text-base font-bold text-white">Control Panel</h3>
+                </div>
+                <p class="text-neutral-400 text-sm mb-4 leading-relaxed">Administration/control-panel components for managing services.</p>
+                <ul class="text-neutral-300 text-sm space-y-1.5 mb-6 flex-1">
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Role-based admin interfaces</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Service &amp; user management</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Audit logs &amp; activity feeds</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Configurable dashboards</li>
+                </ul>
+                <a href="https://github.com/liberu-control-panel/control-panel-laravel" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 text-xs text-neutral-500 hover:text-[#f5c518] transition-colors font-medium">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+                    View on GitHub
+                </a>
+            </div>
+
+            {{-- Maintenance --}}
+            <div class="group bg-neutral-800/60 hover:bg-neutral-800 border border-neutral-700/60 hover:border-[#f5c518]/40 rounded-xl p-6 flex flex-col transition-all duration-200 hover:shadow-xl hover:shadow-black/30">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-neutral-700 text-lg" aria-hidden="true">🛠️</span>
+                    <h3 class="text-base font-bold text-white">Maintenance</h3>
+                </div>
+                <p class="text-neutral-400 text-sm mb-4 leading-relaxed">Scheduling, tracking and reporting for maintenance tasks.</p>
+                <ul class="text-neutral-300 text-sm space-y-1.5 mb-6 flex-1">
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Work order scheduling</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Inspection &amp; checklist management</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Asset &amp; maintenance history</li>
+                    <li class="flex items-start gap-2"><span class="text-[#f5c518] mt-0.5 shrink-0">✦</span>Reporting &amp; compliance logs</li>
+                </ul>
+                <a href="https://github.com/liberu-maintenance/maintenance-laravel" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 text-xs text-neutral-500 hover:text-[#f5c518] transition-colors font-medium">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+                    View on GitHub
+                </a>
+            </div>
+
         </div>
     </section>
 
