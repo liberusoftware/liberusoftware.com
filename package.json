@@ -11,7 +11,7 @@
         "@tailwindcss/vite": "^4.1.18",
         "autoprefixer": "^10.4.16",
         "laravel-echo": "^2.3.0",
-        "laravel-vite-plugin": "^2.0.1",
+        "laravel-vite-plugin": "^2.1.0",
         "postcss-nesting": "^13.0.2",
         "pusher-js": "^8.4.0",
         "tailwindcss": "^4.1.18",
